@@ -4,16 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Simranjit Singh Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
     <style>
       * {
         margin: 0;
         padding: 0;
       }
       body {
-        background-color: rgb(0,0,33);
+        background-color: rgb(0, 0, 33);
         color: white;
         font-family: poppins, sans-serif;
       }
@@ -22,7 +25,7 @@
         justify-content: space-around;
         align-items: center;
         height: 80px;
-        background-color:rgb(18,18,62);
+        background-color: rgb(18, 18, 62);
       }
       nav ul {
         display: flex;
@@ -36,6 +39,10 @@
         text-decoration: none;
         color: white;
       }
+      nav ul li a:hover {
+        font-size: 1.01rem;
+        color: rgb(153, 153, 226);
+      }
       .left {
         font-size: 1.5rem;
       }
@@ -43,46 +50,81 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin: 90px 0;
       }
-      .firstsection div{
-        width:30%   ;
+      .firstsection div {
+        width: 30%;
       }
-        .leftsection {
-            font-size: 3rem
-        }
-        .rightsection img{
-            width: 80%;
-            margin: 50px 0;
-        }    
-        .purple {
-            color: rgb(170, 128, 228);
-        }
-        </style>
+      .leftsection {
+        font-size: 3rem;
+      }
+      .rightsection img {
+        width: 80%;
+        margin: 50px 0;
+      }
+      .purple {
+        color: rgb(170, 128, 228);
+      }
+      #element {
+        color: rgb(170, 128, 228);
+      }
+      .secondsection {
+        max-width: 80vw;
+        margin: auto;
+      }
+      main hr {
+        border: 0;
+        background: #9c97f1;
+        height: 1px;
+        margin: 60px 80px;
+      }
+    </style>
   </head>
   <body>
     <header>
       <nav>
         <div class="left">Simranjit Singh</div>
         <div class="right">
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">About</a></li>
-                <li><a href="/">Service</a></li>
-                <li><a href="/">Projects</a></li>
-                <li><a href="/">Contect Me</a></li>
-            </ul>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/">About</a></li>
+            <li><a href="/">Service</a></li>
+            <li><a href="/">Projects</a></li>
+            <li><a href="/">Contect Me</a></li>
+          </ul>
         </div>
       </nav>
     </header>
     <main>
-        <section class="firstsection">
-            <div class="leftsection">
-                Hi, My name is <span class="purple">Simranjit Singh</span>, i am a web developer 
-            </div>
-            <div class="rightsection">
-            <img src="images/—Pngtree—developers are coding programs on_14867886.png" alt="Developer Image">
-            </div>
-        </section>
+      <section class="firstsection">
+        <div class="leftsection">
+          Hi, My name is <span class="purple">Simranjit Singh</span>, i am
+          <span id="element"></span>
+        </div>
+        <div class="rightsection">
+          <img
+            src="images/—Pngtree—developers are coding programs on_14867886.png"
+            alt="Developer Image"
+          />
+        </div>
+      </section>
+      <hr />
+      <section class="secondsection">
+        <h1>Past Experience</h1>
+      </section>
     </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Website Developer",
+          "Frontend Developer",
+          "Backend Developer",
+          "Full Stack Developer",
+        ],
+        typeSpeed: 50,
+      });
+    </script>
   </body>
 </html>
