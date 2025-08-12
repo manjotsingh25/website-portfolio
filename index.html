@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Manjot Singh Portfolio</title>
+    <title>Simranjit Singh Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -32,27 +32,44 @@
         list-style: none;
         margin: 0 20px;
       }
+      nav ul li a {
+        text-decoration: none;
+        color: white;
+      }
       .left {
         font-size: 1.5rem;
       }
       .firstsection {
         display: flex;
         justify-content: space-around;
-        margin: 23px 0;
+        align-items: center;
       }
-    </style>
+      .firstsection div{
+        width:30%   ;
+      }
+        .leftsection {
+            font-size: 3rem
+        }
+        .rightsection img{
+            width: 80%;
+            margin: 50px 0;
+        }    
+        .purple {
+            color: rgb(170, 128, 228);
+        }
+        </style>
   </head>
   <body>
     <header>
       <nav>
-        <div class="left">Manjot Singh</div>
+        <div class="left">Simranjit Singh</div>
         <div class="right">
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Service</li>
-                <li>Projects</li>
-                <li>Contect Me</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/">About</a></li>
+                <li><a href="/">Service</a></li>
+                <li><a href="/">Projects</a></li>
+                <li><a href="/">Contect Me</a></li>
             </ul>
         </div>
       </nav>
@@ -60,10 +77,10 @@
     <main>
         <section class="firstsection">
             <div class="leftsection">
-                left
+                Hi, My name is <span class="purple">Simranjit Singh</span>, i am a web developer 
             </div>
             <div class="rightsection">
-                right
+            <img src="images/—Pngtree—developers are coding programs on_14867886.png" alt="Developer Image">
             </div>
         </section>
     </main>
