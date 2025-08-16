@@ -4,319 +4,240 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Manjot Singh Portfolio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
     <style>
-      * {
-        margin: 0;
-        padding: 0;
-      }
       body {
-        background-color: rgb(0, 0, 33);
+        margin: 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #1c1c1c; /* dark gray */
         color: white;
-        font-family: poppins, sans-serif;
+      }
+      header {
+        background: linear-gradient(135deg, #1c1c1c, #2e2e2e);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+      }
+      header h1 {
+        font-size: 3rem;
+        margin: 0;
+        color: #66e0ff;
+      }
+      header p {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        color: #ddd;
       }
       nav {
         display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
-        background-color: rgb(18, 18, 62);
-      }
-      nav ul {
-        display: flex;
         justify-content: center;
+        gap: 30px;
+        padding: 15px;
+        background: #1c1c1c;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+        position: sticky;
+        top: 0;
       }
-      nav ul li {
-        list-style: none;
-        margin: 0 20px;
-      }
-      nav ul li a {
+      nav a {
         text-decoration: none;
-        color: white;
+        color: #00c6ff;
+        font-weight: bold;
+        transition: 0.3s;
+        font-size: 1.2rem;
       }
-      nav ul li a:hover {
-        font-size: 1.01rem;
-        color: rgb(153, 153, 226);
+      nav a:hover {
+        color: #66e0ff;
       }
-      .left {
-        font-size: 1.5rem;
-      }
-      .firstsection {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        margin: 60px 0;
-      }
-      .firstsection div {
-        width: 30%;
-      }
-      .leftsection {
-        font-size: 3rem;
-      }
-      .leftsection .button {
-        padding: 15px 0;
-      }
-      .leftsection .btn{
-        padding: 12px;
-        color: white;
-        background: #1e2167;
-        border: 2px solid white;
-        border-radius: 6px;
-        font-size: 20px;
-        cursor: pointer;
-      }
-      .rightsection img {
-        width: 80%;
-        margin: 10px 0;
-      }
-      .purple {
-        color: rgb(170, 128, 228);
-      }
-      .text-gray {
-        color: gray;
-      }
-      #element {
-        color: rgb(170, 128, 228);
-      }
-      .secondsection {
-        max-width: 80vw;
+      section {
+        padding: 40px 20px;
+        max-width: 1100px;
         margin: auto;
-        height: 80vh;
+        font-size: 20px;
       }
-      main hr {
-        border: 0;
-        background: #9c97f1;
-        height: 1px;
-        margin: 35px 80px;
+      h2 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 40px;
+        color: #66e0ff;
       }
-      .secondsection h1 {
-        font-size: 1.9rem;
+      .projects {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 20px;
       }
-      .secondsection .box {
-        background: white;
-        width: 75vw;
-        height: 2px;
-        margin: 40px 0;
+      .project-card {
+        background: #2e2e2e; /* darker gray */
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        transition: transform 0.3s;
+        color: white;
+      }
+      .project-card:hover {
+        transform: translateY(-5px);
+      }
+      .project-card img {
+        width: 100%;
+        border-radius: 10px;
+        margin-bottom: 15px;
+      }
+      .skills {
         display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
       }
-      .secondsection .vertical {
-        width: 1px;
-        height: 80px;
-        background-color: white;
-        margin: 0 150px;
+      .skill {
+        padding: 10px 20px;
+        background: #00c6ff;
+        color: #1c1c1c;
+        border-radius: 20px;
+        font-size: 1.3rem;
+        font-weight: bold;
       }
-      .image-top {
-        width: 35px;
-        position: relative;
-        top: -35px;
-        left: -9px;
+      .contact-form {
+        max-width: 600px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
       }
-      .vertical-title {
-        position: relative;
-        top: 45px;
-        width: 150px;
-        font-size: 18px;
+      .contact-form input,
+      .contact-form textarea {
+        padding: 12px;
+        border: 1px solid #555;
+        border-radius: 8px;
+        font-size: 1rem;
+        background: #333;
+        color: white;
       }
-      .vertical-desc {
-        position: relative;
-        top: 48px;
-        width: 150px;
-        color: gray;
-        font-size: 10px;
+      .contact-form button {
+        padding: 12px;
+        border: none;
+        background: #66e0ff;
+        color: #1c1c1c;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+      .contact-form button:hover {
+        background: #00c6ff;
       }
       footer {
-        background-color: rgb(18, 18, 62);
-      }
-      .footer {
-        display: flex;
-        padding: 20px 60px;
-        justify-content: space-between;
-      }
-      .footer ul {
-        list-style: none;
-      }
-      .footer > div {
-        width: 250px;
-      }
-      footer .footer-rights {
+        background: #111;
+        color: #ccc;
         text-align: center;
-        padding: 12px 0;
-        color: gray;
+        padding: 30px 20px;
+        margin-top: 40px;
       }
-      @media screen and (max-width: 2000px) {
-        body{
-          background-color: rgb(0, 0, 33);
-        }
-        .box{
-          flex-direction: column;
-        }
-        .secondsection .vertical {
-        height: unset;
-        }
-        .image-top{
-          top: 35px;
-        }
-        .vertical-title, .vertical-desc{
-          left: 45px;
-          top: 0;
-        }
-        .secondsection .box{
-          width: 80vw;
-        }
-        nav{
-          flex-direction: column;
-          align-items: center;
-        }
-        .footer-rights{
-          display: none;
-        }
-        .footer{
-          display: none;
-        }
-        .firstsection {
-          flex-direction: column-reverse;
-        }
-        .leftsection{
-          width: 100% !important;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-        .rightsection{
-          width: 601px! important;
-        }
+      footer a {
+        color: #66e0ff;
+        text-decoration: none;
+        margin: 0 10px;
       }
     </style>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="left">Manjot Singh</div>
-        <div class="right">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/">About</a></li>
-            <li><a href="/">Service</a></li>
-            <li><a href="/">Projects</a></li>
-            <li><a href="/">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+        <img src="MANJOT SINGH-photoaidcom-cropped.jpg" alt="Manjot Singh" style="border-radius: 100px; width: 200px; height: auto; padding: 10px;" />
+      <h1>Manjot Singh</h1>
+      <p>Web Developer | Frontend & Backend | Full Stack Developer</p>
     </header>
-    <main>
-      <section class="firstsection">
-        <div class="leftsection">
-          <div>Hi, My name is <span class="purple">Manjot Singh</span></div>
-          <span id="element"></span>
-          <div class="button"></div>
-          <button class="btn">Download Resume</button>
-          <button class="btn">Visit Github</button>
+
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p
+        style="text-align: center; max-width: 800px; margin: auto; color: #ddd"
+      >
+        Hi, I’m Manjot Singh, a passionate Web Developer who loves turning ideas
+        into interactive, user-friendly, and visually appealing digital
+        experiences. I specialize in creating modern, responsive, and
+        performance-driven websites that not only look great but also deliver
+        seamless functionality. With a strong foundation in HTML, CSS, JHANGO, I
+        enjoy building projects that solve real-world problems and bring value
+        to users. I’m constantly learning and exploring new technologies to stay
+        up-to-date with the latest trends in web development. When I’m not
+        coding, I’m usually exploring design inspirations, leveling up my
+        skills, or working on personal projects that challenge my creativity. My
+        ultimate goal is to grow as a developer, collaborate with innovative
+        teams, and build digital solutions that make an impact.
+      </p>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="projects">
+        <div class="project-card">
+          <h3 style="color: #66e0ff">Portfolio Website</h3>
+          <p>
+            A modern, responsive portfolio site showcasing my web development
+            skills and projects.
+          </p>
         </div>
-        <div class="rightsection">
-          <img
-            src="images/—Pngtree—developers are coding programs on_14867886.png"
-            alt="Developer Image"
-          />
+        <div class="project-card">
+          <h3 style="color: #66e0ff">E-Commerce Platform</h3>
+          <p>
+            Developed a full-stack e-commerce website with product listings,
+            cart, and secure checkout.
+          </p>
         </div>
-      </section>
-      <hr />
-      <section class="secondsection">
-        <span class="text-gray"> what i have Done so far </span>
-        <br />
-        <h1>Work Experience</h1>
-        <div class="box">
-        <div class="vertical">
-          <img class="image-top" src="images/html.webp" alt="Image">
-          <div class=vertical-title>
-            HTML Developer
-          </div>
-          <div class=vertical-desc>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis tempore delectus veritatis nostrum velit in consectetur magnam unde hic? Ipsa at quos minus expedita et officia? Expedita fugiat voluptates tenetur.
-          </div>
-        </div>
-         <div class="vertical">
-          <img class="image-top" src="images/html.webp" alt="Image">
-          <div class=vertical-title>
-            HTML Developer
-          </div>
-          <div class=vertical-desc>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia officiis temporibus fugiat odit eveniet quod voluptates harum incidunt! Porro maiores incidunt modi laudantium deleniti tempore quaerat laborum esse necessitatibus ratione.
-          </div>
-         </div>
-          <div class="vertical">
-            <img class="image-top" src="images/html.webp" alt="Image"><div class=vertical-title>
-            HTML Developer
-          </div>
-          <div class=vertical-desc>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia officiis temporibus fugiat odit eveniet quod voluptates harum incidunt! Porro maiores incidunt modi laudantium deleniti tempore quaerat laborum esse necessitatibus ratione.
-          </div>
-          </div>
-           <div class="vertical">
-            <img class="image-top" src="images/html.webp" alt="Image">
-            <div class=vertical-title>
-            HTML Developer
-          </div>
-          <div class=vertical-desc>
-           Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia officiis temporibus fugiat odit eveniet quod voluptates harum incidunt! Porro maiores incidunt modi laudantium deleniti tempore quaerat laborum esse necessitatibus ratione.
-          </div>
-           </div>
-      </section>
-    </main>
-    <footer>
-      <div class="footer">
-        <div class="footer-first">
-          <h3>Manjot Singh Developer Portfolio</h3>
-        </div>
-        <div class="footer-second">
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Service</li>
-            <li>Projects</li>
-            <li>Contect Me</li>
-          </ul>
-        </div>
-        <div class="footer-third">
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Service</li>
-            <li>Projects</li>
-            <li>Contect Me</li>
-          </ul>
-        </div>
-        <div class="footer-fourth">
-          <ul>
-            <li>Home</li>
-            <li>About</li>
-            <li>Service</li>
-            <li>Projects</li>
-            <li>Contect Me</li>
-          </ul>
+        <div class="project-card">x
+          <h3 style="color: #66e0ff">Blog CMS</h3>
+          <p>
+            Created a custom CMS for blogs with an admin dashboard and real-time
+            content management.
+          </p>
         </div>
       </div>
-      <div class="footer-rights">
-        www.Manjotsinghportfolio.com | All rights reserved © 2023
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <div class="skill">HTML5</div>
+        <div class="skill">CSS3</div>
+        <div class="skill">JavaScript (ES6+)</div>
+        <div class="skill">React.js</div>
+        <div class="skill">Node.js</div>
+        <div class="skill">Express.js</div>
+        <div class="skill">MongoDB</div>
+        <div class="skill">Git & GitHub</div>
+        <div class="skill">Responsive Design</div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Me</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="6" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <footer>
+      <p>
+        &copy; 2025 Manjot Singh. All Rights Reserved.
+      </p>
+      <div>
+        <a href="https://github.com/manjotsingh25" target="_blank">GitHub</a>
+        <a
+          href="https://linkedin.com/in/manjot-singh-437788309?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          target="_blank"
+          >LinkedIn</a
+        >
+        <a href="https://instagram.com/manjot_x02/profilecard/?igsh=ZG9ya3I2bXA1NWJt" target="_blank"
+          >Instagram</a
+        >
       </div>
     </footer>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <!-- Setup and start animation! -->
-    <script>
-      var typed = new Typed("#element", {
-        strings: [
-          "Website Developer",
-          "Frontend Developer",
-          "Backend Developer",
-          "Full Stack Developer",
-        ],
-        typeSpeed: 50,
-      });
-    </script>
   </body>
 </html>
